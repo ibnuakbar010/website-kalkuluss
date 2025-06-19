@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulus Pintar - Belajar Kalkulus dengan Mudah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .tab-active {
+            border-bottom: 3px solid #3b82f6;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        
+        .math-equation {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-square-root-alt text-blue-600 text-2xl mr-2"></i>
+                <h1 class="text-xl font-bold text-blue-600">Kalkulus<span class="text-blue-400">Pintar</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#beranda" class="text-blue-600 font-medium hover:text-blue-800">Beranda</a>
+                <a href="#materi" class="text-gray-600 hover:text-blue-600">Materi</a>
+                <a href="#kalkulator" class="text-gray-600 hover:text-blue-600">Kalkulator</a>
+                <a href="#latihan" class="text-gray-600 hover:text-blue-600">Latihan Soal</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Belajar Kalkulus Jadi Lebih Mudah</h1>
+                <p class="text-xl mb-8 opacity-90">Platform pembelajaran kalkulus lengkap untuk siswa SMA hingga mahasiswa dengan materi, kalkulator, dan latihan soal interaktif.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#materi" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium text-center hover:bg-gray-100 transition">Mulai Belajar</a>
+                    <a href="#latihan" class="border-2 border-white px-6 py-3 rounded-lg font-medium text-center hover:bg-white hover:bg-opacity-10 transition">Coba Latihan</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="bg-white bg-opacity-20 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="text-center mb-4">
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Contoh Soal</span>
+                    </div>
+                    <p class="mb-3">Hitunglah turunan pertama dari:</p>
+                    <p class="math-equation text-2xl mb-4 text-center">f(x) = 3x<sup>2</sup> + 2x - 5</p>
+                    <div class="bg-white bg-opacity-30 p-3 rounded-lg">
+                        <p class="font-medium mb-1">Penyelesaian:</p>
+                        <p class="math-equation">f'(x) = 6x + 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Importance Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Mengapa Belajar Kalkulus?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-atom text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Dasar Sains & Teknologi</h3>
+                    <p class="text-gray-600">Kalkulus menjadi fondasi penting dalam fisika, teknik, ekonomi, dan berbagai bidang sains modern.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Melatih Berpikir Analitis</h3>
+                    <p class="text-gray-600">Membantu mengembangkan kemampuan memecahkan masalah secara logis dan sistematis.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Persiapan Kuliah</h3>
+                    <p class="text-gray-600">Materi wajib untuk berbagai jurusan di perguruan tinggi seperti teknik, ekonomi, dan sains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materi Section -->
+    <section id="materi" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Materi Kalkulus</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Pelajari konsep-konsep dasar kalkulus dengan penjelasan lengkap dan contoh soal yang mudah dipahami.</p>
+
+            <div class="flex overflow-x-auto pb-4 mb-8 scrollbar-hide">
+                <div class="flex space-x-1">
+                    <button class="tab-button px-6 py-2 rounded-t-lg font-medium" data-tab="limit">Limit</button>
+                    <button class="tab-button px-6 py-2 rounded-t-lg font-medium" data-tab="turunan">Turunan</button>
+                    <button class="tab-button px-6 py-2 rounded-t-lg font-medium" data-tab="integral">Integral</button>
+                    <button class="tab-button px-6 py-2 rounded-t-lg font-medium" data-tab="aplikasi">Aplikasi</button>
+                </div>
+            </div>
+
+            <div class="tab-content bg-white p-6 rounded-lg shadow-sm">
+                <!-- Limit Content -->
+                <div id="limit" class="tab-pane active">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Konsep Limit</h3>
+                    <p class="mb-4 text-gray-700">Limit adalah nilai yang didekati oleh suatu fungsi ketika variabel inputnya mendekati suatu titik tertentu. Konsep ini fundamental dalam kalkulus dan digunakan untuk mendefinisikan turunan dan integral.</p>
+
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+                        <h4 class="font-medium text-blue-800 mb-2">Contoh Soal:</h4>
+                        <p class="math-equation mb-2">Hitunglah: lim<sub>x→2</sub> (x<sup>2</sup> - 4)/(x - 2)</p>
+                        <div class="bg-white p-3 rounded">
+                            <h5 class="font-medium text-gray-700 mb-1">Penyelesaian:</h5>
+                            <p class="math-equation">lim<sub>x→2</sub> (x<sup>2</sup> - 4)/(x - 2) = lim<sub>x→2</sub> (x + 2)(x - 2)/(x - 2)</p>
+                            <p class="math-equation">= lim<sub>x→2</sub> (x + 2) = 4</p>
+                        </div>
+                    </div>
+
+                    <h4 class="font-semibold mb-2 text-gray-800">Teorema Limit Dasar:</h4>
+                    <ul class="list-disc pl-5 mb-6 space-y-1 text-gray-700">
+                        <li>lim<sub>x→a</sub> k = k (k konstan)</li>
+                        <li>lim<sub>x→a</sub> [f(x) ± g(x)] = lim f(x) ± lim g(x)</li>
+                        <li>lim<sub>x→a</sub> [f(x) × g(x)] = lim f(x) × lim g(x)</li>
+                        <li>lim<sub>x→a</sub> [f(x)/g(x)] = lim f(x)/lim g(x), jika lim g(x) ≠ 0</li>
+                    </ul>
+                </div>
+
+                <!-- Turunan Content -->
+                <div id="turunan" class="tab-pane hidden">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Konsep Turunan</h3>
+                    <p class="mb-4 text-gray-700">Turunan fungsi adalah ukuran seberapa cepat nilai fungsi berubah terhadap perubahan variabel inputnya. Turunan didefinisikan sebagai limit dari rasio perubahan.</p>
+
+                    <div class="bg-green-50 border-l-4 border-green-500 p-4 mb-6">
+                        <h4 class="font-medium text-green-800 mb-2">Contoh Soal:</h4>
+                        <p class="math-equation mb-2">Tentukan turunan dari f(x) = 4x<sup>3</sup> - 2x<sup>2</sup> + 5x - 1</p>
+                        <div class="bg-white p-3 rounded">
+                            <h5 class="font-medium text-gray-700 mb-1">Penyelesaian:</h5>
+                            <p class="math-equation">f'(x) = d/dx (4x<sup>3</sup>) - d/dx (2x<sup>2</sup>) + d/dx (5x) - d/dx (1)</p>
+                            <p class="math-equation">= 12x<sup>2</sup> - 4x + 5</p>
+                        </div>
+                    </div>
+
+                    <h4 class="font-semibold mb-2 text-gray-800">Aturan Dasar Turunan:</h4>
+                    <ul class="list-disc pl-5 mb-6 space-y-1 text-gray-700">
+                        <li>Aturan Pangkat: d/dx (x<sup>n</sup>) = nx<sup>n-1</sup></li>
+                        <li>Aturan Konstan: d/dx (c) = 0</li>
+                        <li>Aturan Penjumlahan: d/dx [f(x) + g(x)] = f'(x) + g'(x)</li>
+                        <li>Aturan Perkalian: d/dx [f(x)g(x)] = f'(x)g(x) + f(x)g'(x)</li>
+                    </ul>
+                </div>
+
+                <!-- Integral Content -->
+                <div id="integral" class="tab-pane hidden">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Konsep Integral</h3>
+                    <p class="mb-4 text-gray-700">Integral adalah operasi kebalikan dari turunan. Integral digunakan untuk menghitung luas di bawah kurva, volume benda putar, dan berbagai aplikasi lainnya.</p>
+
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-6">
+                        <h4 class="font-medium text-purple-800 mb-2">Contoh Soal:</h4>
+                        <p class="math-equation mb-2">Hitunglah ∫(3x<sup>2</sup> + 2x - 5) dx</p>
+                        <div class="bg-white p-3 rounded">
+                            <h5 class="font-medium text-gray-700 mb-1">Penyelesaian:</h5>
+                            <p class="math-equation">∫(3x<sup>2</sup> + 2x - 5) dx = 3∫x<sup>2</sup> dx + 2∫x dx - 5∫1 dx</p>
+                            <p class="math-equation">= x<sup>3</sup> + x<sup>2</sup> - 5x + C</p>
+                        </div>
+                    </div>
+
+                    <h4 class="font-semibold mb-2 text-gray-800">Teknik Integral Dasar:</h4>
+                    <ul class="list-disc pl-5 mb-6 space-y-1 text-gray-700">
+                        <li>Integral Tak Tentu: ∫f(x) dx = F(x) + C</li>
+                        <li>Integral Tentu: ∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) - F(a)</li>
+                        <li>Integral Substitusi: ∫f(g(x))g'(x) dx = ∫f(u) du</li>
+                        <li>Integral Parsial: ∫u dv = uv - ∫v du</li>
+                    </ul>
+                </div>
+
+                <!-- Aplikasi Content -->
+                <div id="aplikasi" class="tab-pane hidden">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Aplikasi Kalkulus</h3>
+                    <p class="mb-4 text-gray-700">Kalkulus memiliki banyak aplikasi dalam kehidupan nyata, mulai dari fisika, ekonomi, biologi, hingga teknik.</p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                            <h4 class="font-medium text-yellow-800 mb-2">Fisika:</h4>
+                            <p class="text-gray-700">Menghitung kecepatan dan percepatan benda bergerak. Turunan posisi terhadap waktu adalah kecepatan, dan turunan kecepatan adalah percepatan.</p>
+                        </div>
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                            <h4 class="font-medium text-red-800 mb-2">Ekonomi:</h4>
+                            <p class="text-gray-700">Menghitung biaya marjinal dan pendapatan marjinal dalam bisnis untuk optimasi keuntungan.</p>
+                        </div>
+                        <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4">
+                            <h4 class="font-medium text-indigo-800 mb-2">Teknik:</h4>
+                            <p class="text-gray-700">Merancang struktur bangunan dengan menghitung beban dan tegangan menggunakan integral.</p>
+                        </div>
+                        <div class="bg-pink-50 border-l-4 border-pink-500 p-4">
+                            <h4 class="font-medium text-pink-800 mb-2">Biologi:</h4>
+                            <p class="text-gray-700">Memodelkan pertumbuhan populasi dan penyebaran penyakit menggunakan persamaan diferensial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalkulator Section -->
+    <section id="kalkulator" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Kalkulator Kalkulus</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Hitung limit, turunan, dan integral dengan langkah-langkah penyelesaian secara otomatis.</p>
+
+            <div class="max-w-3xl mx-auto bg-gray-50 rounded-xl p-6 shadow-sm">
+                <div class="flex mb-6 border-b border-gray-200">
+                    <button class="calc-tab px-4 py-2 font-medium" data-calc="limit">Limit</button>
+                    <button class="calc-tab px-4 py-2 font-medium" data-calc="turunan">Turunan</button>
+                    <button class="calc-tab px-4 py-2 font-medium" data-calc="integral">Integral</button>
+                </div>
+
+                <!-- Limit Calculator -->
+                <div id="limit-calc" class="calc-content">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Masukkan fungsi:</label>
+                        <div class="flex items-center">
+                            <span class="math-equation bg-white border border-r-0 border-gray-300 px-3 py-2 rounded-l-lg">lim<sub>x→</sub></span>
+                            <input type="text" class="math-equation flex-1 border border-gray-300 px-3 py-2 rounded-r-lg" placeholder="a" id="limit-point" style="max-width: 60px;">
+                            <span class="mx-2 text-gray-500">(</span>
+                            <input type="text" class="math-equation flex-1 border border-gray-300 px-3 py-2 rounded-lg" placeholder="f(x)" id="limit-function">
+                            <span class="mx-2 text-gray-500">)</span>
+                        </div>
+                    </div>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium">Hitung</button>
+
+                    <div class="mt-6 bg-white p-4 rounded-lg border border-gray-200 hidden" id="limit-result">
+                        <h4 class="font-medium text-gray-800 mb-2">Hasil:</h4>
+                        <div class="math-equation text-xl" id="limit-output"></div>
+                    </div>
+                </div>
+
+                <!-- Turunan Calculator -->
+                <div id="turunan-calc" class="calc-content hidden">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Masukkan fungsi:</label>
+                        <div class="flex items-center">
+                            <span class="math-equation bg-white border border-r-0 border-gray-300 px-3 py-2 rounded-l-lg">d/dx (</span>
+                            <input type="text" class="math-equation flex-1 border border-gray-300 px-3 py-2 rounded-r-lg" placeholder="f(x)" id="turunan-function">
+                            <span class="math-equation bg-white border border-l-0 border-gray-300 px-3 py-2 rounded-r-lg">)</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Turunan terhadap:</label>
+                        <input type="text" class="math-equation border border-gray-300 px-3 py-2 rounded-lg" placeholder="x" id="turunan-variable" style="max-width: 80px;">
+                    </div>
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-medium">Hitung</button>
+
+                    <div class="mt-6 bg-white p-4 rounded-lg border border-gray-200 hidden" id="turunan-result">
+                        <h4 class="font-medium text-gray-800 mb-2">Hasil:</h4>
+                        <div class="math-equation text-xl" id="turunan-output"></div>
+                    </div>
+                </div>
+
+                <!-- Integral Calculator -->
+                <div id="integral-calc" class="calc-content hidden">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Masukkan fungsi:</label>
+                        <div class="flex items-center">
+                            <span class="math-equation bg-white border border-r-0 border-gray-300 px-3 py-2 rounded-l-lg">∫</span>
+                            <input type="text" class="math-equation flex-1 border border-gray-300 px-3 py-2" placeholder="f(x)" id="integral-function">
+                            <span class="math-equation bg-white border border-l-0 border-r-0 border-gray-300 px-3 py-2">dx</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Batas bawah (opsional):</label>
+                            <input type="text" class="math-equation border border-gray-300 px-3 py-2 rounded-lg" placeholder="a" id="integral-lower">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Batas atas (opsional):</label>
+                            <input type="text" class="math-equation border border-gray-300 px-3 py-2 rounded-lg" placeholder="b" id="integral-upper">
+                        </div>
+                    </div>
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-medium">Hitung</button>
+
+                    <div class="mt-6 bg-white p-4 rounded-lg border border-gray-200 hidden" id="integral-result">
+                        <h4 class="font-medium text-gray-800 mb-2">Hasil:</h4>
+                        <div class="math-equation text-xl" id="integral-output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latihan Soal Section -->
+    <section id="latihan" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">Latihan Soal</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Uji pemahaman Anda dengan berbagai soal kalkulus dari berbagai tingkat kesulitan.</p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Soal 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Limit</span>
+                        <span class="text-gray-500 text-sm">Level: Mudah</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Soal 1</h3>
+                    <p class="math-equation mb-4">Hitunglah: lim<sub>x→3</sub> (x<sup>2</sup> - 9)/(x - 3)</p>
+                    <button class="show-answer text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Tampilkan Jawaban</span>
+                        <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                    </button>
+                    <div class="answer mt-4 hidden">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Pembahasan:</h4>
+                            <p class="math-equation mb-2">Faktorkan pembilang:</p>
+                            <p class="math-equation mb-2">(x<sup>2</sup> - 9) = (x + 3)(x - 3)</p>
+                            <p class="math-equation mb-2">lim<sub>x→3</sub> (x + 3)(x - 3)/(x - 3) = lim<sub>x→3</sub> (x + 3)</p>
+                            <p class="math-equation font-medium">= 6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soal 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Turunan</span>
+                        <span class="text-gray-500 text-sm">Level: Sedang</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Soal 2</h3>
+                    <p class="math-equation mb-4">Tentukan turunan pertama dari f(x) = (2x + 1)(x<sup>2</sup> - 3)</p>
+                    <button class="show-answer text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Tampilkan Jawaban</span>
+                        <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                    </button>
+                    <div class="answer mt-4 hidden">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Pembahasan:</h4>
+                            <p class="math-equation mb-2">Gunakan aturan perkalian:</p>
+                            <p class="math-equation mb-2">f'(x) = (2)(x<sup>2</sup> - 3) + (2x + 1)(2x)</p>
+                            <p class="math-equation mb-2">= 2x<sup>2</sup> - 6 + 4x<sup>2</sup> + 2x</p>
+                            <p class="math-equation font-medium">= 6x<sup>2</sup> + 2x - 6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soal 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Integral</span>
+                        <span class="text-gray-500 text-sm">Level: Sedang</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Soal 3</h3>
+                    <p class="math-equation mb-4">Hitunglah ∫(3x<sup>2</sup> + 4x - 2) dx</p>
+                    <button class="show-answer text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Tampilkan Jawaban</span>
+                        <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                    </button>
+                    <div class="answer mt-4 hidden">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Pembahasan:</h4>
+                            <p class="math-equation mb-2">Integralkan setiap suku:</p>
+                            <p class="math-equation mb-2">∫3x<sup>2</sup> dx = x<sup>3</sup></p>
+                            <p class="math-equation mb-2">∫4x dx = 2x<sup>2</sup></p>
+                            <p class="math-equation mb-2">∫-2 dx = -2x</p>
+                            <p class="math-equation font-medium">= x<sup>3</sup> + 2x<sup>2</sup> - 2x + C</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soal 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Aplikasi</span>
+                        <span class="text-gray-500 text-sm">Level: Sulit</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Soal 4</h3>
+                    <p class="mb-4">Sebuah bola dilempar ke atas dengan kecepatan awal 20 m/s. Tinggi bola setelah t detik dinyatakan dengan h(t) = 20t - 5t<sup>2</sup>. Kapan bola mencapai tinggi maksimum?</p>
+                    <button class="show-answer text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                        <span>Tampilkan Jawaban</span>
+                        <i class="fas fa-chevron-down ml-2 text-sm"></i>
+                    </button>
+                    <div class="answer mt-4 hidden">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Pembahasan:</h4>
+                            <p class="mb-2">Tinggi maksimum terjadi ketika turunan h(t) = 0:</p>
+                            <p class="math-equation mb-2">h'(t) = 20 - 10t</p>
+                            <p class="math-equation mb-2">20 - 10t = 0 → t = 2 detik</p>
+                            <p class="font-medium">Jadi bola mencapai tinggi maksimum setelah 2 detik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium">Lihat Lebih Banyak Soal</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-square-root-alt text-blue-400 text-2xl mr-2"></i>
+                        <h3 class="text-xl font-bold text-blue-400">KalkulusPintar</h3>
+                    </div>
+                    <p class="text-gray-400">Platform pembelajaran kalkulus online untuk siswa SMA hingga mahasiswa dengan materi lengkap dan interaktif.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navigasi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#beranda" class="text-gray-400 hover:text-white">Beranda</a></li>
+                        <li><a href="#materi" class="text-gray-400 hover:text-white">Materi</a></li>
+                        <li><a href="#kalkulator" class="text-gray-400 hover:text-white">Kalkulator</a></li>
+                        <li><a href="#latihan" class="text-gray-400 hover:text-white">Latihan Soal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> belajarkalkulus.com</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +62 822 4195 4172/ +62 813-2623-8492</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2"></i> Boyolali, Jawa Tengah, Indonesia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Ikuti Kami</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-600"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 KalkulusPintar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality for Materi section
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                tabButtons.forEach(btn => btn.classList.remove('tab-active'));
+                tabPanes.forEach(pane => pane.classList.add('hidden'));
+
+                // Add active class to clicked button
+                button.classList.add('tab-active');
+
+                // Show corresponding pane
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.remove('hidden');
+            });
+        });
+
+        // Set first tab as active by default
+        if (tabButtons.length > 0) {
+            tabButtons[0].classList.add('tab-active');
+        }
+
+        // Tab functionality for Kalkulator section
+        const calcTabs = document.querySelectorAll('.calc-tab');
+        const calcContents = document.querySelectorAll('.calc-content');
+
+        calcTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                calcTabs.forEach(t => t.classList.remove('bg-blue-100', 'text-blue-800', 'rounded-t-lg'));
+
+                // Add active class to clicked tab
+                tab.classList.add('bg-blue-100', 'text-blue-800', 'rounded-t-lg');
+
+                // Hide all contents and show corresponding one
+                calcContents.forEach(content => content.classList.add('hidden'));
+                const calcId = tab.getAttribute('data-calc') + '-calc';
+                document.getElementById(calcId).classList.remove('hidden');
+            });
+        });
+
+        // Set first calculator tab as active by default
+        if (calcTabs.length > 0) {
+            calcTabs[0].classList.add('bg-blue-100', 'text-blue-800', 'rounded-t-lg');
+        }
+
+        // Show/hide answer functionality
+        const showAnswerButtons = document.querySelectorAll('.show-answer');
+
+        showAnswerButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                if (answer.classList.contains('hidden')) {
+                    answer.classList.remove('hidden');
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                    button.querySelector('span').textContent = 'Sembunyikan Jawaban';
+                } else {
+                    answer.classList.add('hidden');
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                    button.querySelector('span').textContent = 'Tampilkan Jawaban';
+                }
+            });
+        });
+
+        // Simple calculator functionality (demo purposes)
+        document.querySelectorAll('#limit-calc button, #turunan-calc button, #integral-calc button').forEach(button => {
+            button.addEventListener('click', () => {
+                const parentId = button.closest('.calc-content').id;
+                const resultDiv = document.querySelector(`#${parentId} .calc-content > div:last-child`);
+
+                if (parentId === 'limit-calc') {
+                    const func = document.getElementById('limit-function').value || 'x^2';
+                    const point = document.getElementById('limit-point').value || '2';
+                    document.getElementById('limit-output').innerHTML =
+                        `lim<sub>x→${point}</sub> (${func}) = ${point*2}`;
+                } else if (parentId === 'turunan-calc') {
+                    const func = document.getElementById('turunan-function').value || 'x^2';
+                    const varName = document.getElementById('turunan-variable').value || 'x';
+                    document.getElementById('turunan-output').innerHTML =
+                        `d/d${varName} (${func}) = 2${varName}`;
+                } else if (parentId === 'integral-calc') {
+                    const func = document.getElementById('integral-function').value || 'x';
+                    const lower = document.getElementById('integral-lower').value;
+                    const upper = document.getElementById('integral-upper').value;
+
+                    if (lower && upper) {
+                        document.getElementById('integral-output').innerHTML =
+                            `∫<sub>${lower}</sub><sup>${upper}</sup> ${func} dx = ${(upper*upper/2 - lower*lower/2).toFixed(2)}`;
+                    } else {
+                        document.getElementById('integral-output').innerHTML =
+                            `∫ ${func} dx = (${func}<sup>2</sup>)/2 + C`;
+                    }
+                }
+
+                resultDiv.classList.remove('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
